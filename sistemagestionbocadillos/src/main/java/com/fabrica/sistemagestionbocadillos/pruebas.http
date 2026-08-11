@@ -1,0 +1,38 @@
+
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Bocadillo Veleño Premium",
+  "precio": 3500,
+  "cantidad": 20
+}
+###
+GET http://localhost:8080/api/productos
+###
+PUT http://localhost:8080/api/productos/13
+Content-Type: application/json
+ 
+ {
+  "nombre": "Bocadillo Veleño Extra Grande",
+  "precio": 4500,
+  "cantidad": 50
+}
+###
+DELETE http://localhost:8080/api/productos/13
+
+
+### PRUEBA ERROR 404
+GET http://localhost:8080/api/productos/999
+
+
+### PRUEBA ERROR 400
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "precio": "tres mil"
+}
+
+### PRUEBA ERROR 405
+PATCH http://localhost:8080/api/productos/113
