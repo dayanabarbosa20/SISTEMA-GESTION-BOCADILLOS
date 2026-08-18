@@ -10,7 +10,7 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/api/productos
 ###
-PUT http://localhost:8080/api/productos/13
+PUT http://localhost:8080/api/productos/14
 Content-Type: application/json
  
  {
@@ -19,7 +19,7 @@ Content-Type: application/json
   "cantidad": 50
 }
 ###
-DELETE http://localhost:8080/api/productos/13
+DELETE http://localhost:8080/api/productos/14
 
 
 ### PRUEBA ERROR 404
@@ -35,4 +35,4 @@ Content-Type: application/json
 }
 
 ### PRUEBA ERROR 405
-PATCH http://localhost:8080/api/productos/113
+PATCH http://localhost:8080/api/productos/14
