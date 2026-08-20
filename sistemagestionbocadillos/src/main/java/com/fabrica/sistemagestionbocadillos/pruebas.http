@@ -37,40 +37,52 @@ Content-Type: application/json
 ### PRUEBA ERROR 405
 PATCH http://localhost:8080/api/productos/14
 
-### 1. Registrar un nuevo usuario (Éxito)
+### 1. Registrar un nuevo usuario (Éxito - 201)
 POST http://localhost:8080/api/auth/register
 Content-Type: application/json
 
 {
   "nombre": "Dayana Barbosa",
-  "email": "dayana@gmail.com",
+  "email": "dayana2@gmail.com",
   "password": "123"
 }
 
-### 2. Registrar el mismo usuario (Error 400 - Duplicado)
+
+
+
+
+
+
+
+
+
+
+
+
+### 2. Registrar el mismo usuario (Error - 400)
 POST http://localhost:8080/api/auth/register
 Content-Type: application/json
 
 {
   "nombre": "Dayana Barbosa",
-  "email": "dayana@gmail.com",
+  "email": "dayana2@gmail.com",
   "password": "123"
 }
 
-### 3. Iniciar sesión (Éxito)
+### 3. Iniciar sesión (Éxito - 200)
 POST http://localhost:8080/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "dayana@gmail.com",
+  "email": "dayana2@gmail.com",
   "password": "123"
 }
 
-### 4. Iniciar sesión (Error 401 - Contraseña incorrecta)
+### 4. Iniciar sesión con clave errónea (Error - 401)
 POST http://localhost:8080/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "dayana@gmail.com",
+  "email": "dayana2@gmail.com",
   "password": "clave_incorrecta"
 }
