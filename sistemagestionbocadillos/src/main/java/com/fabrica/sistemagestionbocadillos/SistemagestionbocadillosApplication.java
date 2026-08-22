@@ -17,5 +17,6 @@ public class SistemagestionbocadillosApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SistemagestionbocadillosApplication.class, args);
+
     }
 }

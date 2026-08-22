@@ -37,27 +37,16 @@ Content-Type: application/json
 ### PRUEBA ERROR 405
 PATCH http://localhost:8080/api/productos/14
 
+
 ### 1. Registrar un nuevo usuario (Éxito - 201)
 POST http://localhost:8080/api/auth/register
 Content-Type: application/json
 
 {
   "nombre": "Dayana Barbosa",
-  "email": "dayana2@gmail.com",
+  "email": "dayan2@gmail.com",
   "password": "123"
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### 2. Registrar el mismo usuario (Error - 400)
 POST http://localhost:8080/api/auth/register
@@ -65,7 +54,7 @@ Content-Type: application/json
 
 {
   "nombre": "Dayana Barbosa",
-  "email": "dayana2@gmail.com",
+  "email": "dayan2@gmail.com",
   "password": "123"
 }
 
@@ -74,7 +63,7 @@ POST http://localhost:8080/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "dayana2@gmail.com",
+  "email": "dayan2@gmail.com",
   "password": "123"
 }
 
@@ -83,6 +72,38 @@ POST http://localhost:8080/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "dayana2@gmail.com",
+  "email": "dayan2@gmail.com",
   "password": "clave_incorrecta"
 }
+
+
+
+### 5. Crear un producto (Éxito - 201)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Bocadillo Veleño Tradicional 500g",
+  "precio": 8500.0,
+  "cantidad": 100
+}
+
+### 6. Listar todos los productos (Éxito - 200)
+GET http://localhost:8080/api/productos
+
+### 7. Consultar producto por ID (Éxito - 200)
+GET http://localhost:8080/api/productos/19
+
+### 8. Actualizar producto (Éxito - 200)
+PUT http://localhost:8080/api/productos/19
+Content-Type: application/json
+
+{
+  "nombre": "Bocadillo Veleño Tradicional 500g",
+  "precio": 9500.0,
+  "cantidad": 120
+}
+
+### 9. Eliminar producto (Éxito - 200)
+DELETE http://localhost:8080/api/productos/19
+
